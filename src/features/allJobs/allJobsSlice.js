@@ -6,7 +6,7 @@ const initialFilterState = {
   search: " ",
   searchStatus: "all",
   searchType: "all",
-  sortoptipn: ["latest", "oldest", "a-z", "z-a"],
+  sortOptions: ["latest", "oldest", "a-z", "z-a"],
 };
 
 const initialState = {

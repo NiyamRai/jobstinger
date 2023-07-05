@@ -1,4 +1,5 @@
 const FormRowSelect = ({ labelText, name, value, handleChange, list }) => {
+  console.log(list);
   return (
     <div className="form-row">
       <label htmlFor={name} className="form-label">
