@@ -5,14 +5,23 @@ import Wrapper from "../assets/wrappers/JobsContainer";
 import { getallJobs } from "../features/allJobs/allJobsSlice";
 import { useSelector, useDispatch } from "react-redux";
 import PageBtnContainer from "./PageBtnContainer";
+
 const JobsContainer = () => {
-  const { jobs, isloading, page, totalJobs, numberOfpages } = useSelector(
-    (store) => store.allJobs
-  );
+  const {
+    jobs,
+    isloading,
+    page,
+    totalJobs,
+    numberOfpages,
+    search,
+    searchStatus,
+    searchType,
+    sort,
+  } = useSelector((store) => store.allJobs);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getallJobs());
-  }, []);
+  }, [page, search, searchStatus, searchType, sort]);
   console.log(numberOfpages);
 
   if (isloading) {
