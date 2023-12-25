@@ -95,8 +95,8 @@ const allJobSlice = createSlice({
     },
     [showStats.fulfilled]: (state, { payload }) => {
       state.isloading = false;
-      state.stats = payload.defaultStats;
-      state.monthlyApplications = payload.monthlyApplications;
+      state.stats = payload?.defaultStats;
+      state.monthlyApplications = payload?.monthlyApplications;
     },
     [showStats.rejected]: (state, { payload }) => {
       state.isloading = false;
